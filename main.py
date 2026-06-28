@@ -22,5 +22,9 @@ def get_info():
         "port": 8000
     }
 
+@app.get("/test")
+def test_route():
+    return {"status": "success", "message": "Ветка успешно протестирована!"}
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="localhost", port=8000, reload=True)
